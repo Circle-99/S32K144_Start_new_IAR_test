@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "rte_ctledtask.h": "c",
+        "adc.h": "c"
+    }
+}

@@ -1,0 +1,9 @@
+﻿[Project]
+LoadCount=12
+GUID=EBF29134-990F-4770-AB50-508C403B74D3
+TSAppVersion=100
+
+[TSMaster]
+TSMasterVersion=2024.8.12.1163
+TSMasterArchitect=x86
+
