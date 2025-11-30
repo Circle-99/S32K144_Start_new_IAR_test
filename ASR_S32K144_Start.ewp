@@ -2225,7 +2225,16 @@
             <group>
                 <name>src</name>
                 <file>
+                    <name>$PROJ_DIR$\Appl\GenData\src\Adc_Cfg.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Appl\GenData\src\Adc_PBcfg.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\Appl\GenData\src\Dio_Cfg.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Appl\GenData\src\Gpt_PBcfg.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\Appl\GenData\src\Mcu_Cfg.c</name>
@@ -2240,11 +2249,320 @@
                     <name>$PROJ_DIR$\Appl\GenData\src\Port_PBcfg.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\Appl\GenData\src\Pwm_PBcfg.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\Appl\GenData\src\Spi_Cfg.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\Appl\GenData\src\Spi_PBcfg.c</name>
                 </file>
+                <configuration>
+                    <name>Debug</name>
+                    <settings>
+                        <name>ICCARM</name>
+                        <data>
+                            <version>35</version>
+                            <wantNonLocal>0</wantNonLocal>
+                            <debug>1</debug>
+                            <option>
+                                <name>CCDefines</name>
+                                <state>__ICCARM__</state>
+                                <state>CPU_S32K148</state>
+                                <state>BRS_DERIVATIVE_S32K144</state>
+                                <state>BASIC_RUNTIME_SYSTEM_TYPE_MSR4</state>
+                                <state>DISABLE_WDOG</state>
+                            </option>
+                            <option>
+                                <name>CCPreprocFile</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCPreprocComments</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCPreprocLine</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCListCFile</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCListCMnemonics</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCListCMessages</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCListAssFile</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCListAssSource</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCEnableRemarks</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCDiagSuppress</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CCDiagRemark</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CCDiagWarning</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CCDiagError</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CCObjPrefix</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCAllowList</name>
+                                <version>1</version>
+                                <state>00000000</state>
+                            </option>
+                            <option>
+                                <name>CCDebugInfo</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IEndianMode</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IProcessor</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IExtraOptionsCheck</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IExtraOptions</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CCLangConformance</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCSignedPlainChar</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCRequirePrototypes</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCDiagWarnAreErr</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCCompilerRuntimeInfo</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IFpuProcessor</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>OutputFile</name>
+                                <state>$FILE_BNAME$.o</state>
+                            </option>
+                            <option>
+                                <name>CCLibConfigHeader</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>PreInclude</name>
+                                <state></state>
+                            </option>
+                            <option>
+                                <name>CompilerMisraOverride</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCIncludePath2</name>
+                                <state>$PROJ_DIR$\BSW\_Common</state>
+                                <state>$PROJ_DIR$\BSW\BswM</state>
+                                <state>$PROJ_DIR$\BSW\Can</state>
+                                <state>$PROJ_DIR$\BSW\CanIf</state>
+                                <state>$PROJ_DIR$\BSW\CanSM</state>
+                                <state>$PROJ_DIR$\BSW\CanTp</state>
+                                <state>$PROJ_DIR$\BSW\CanTrcv_30_Tja1043</state>
+                                <state>$PROJ_DIR$\BSW\Com</state>
+                                <state>$PROJ_DIR$\BSW\ComM</state>
+                                <state>$PROJ_DIR$\BSW\Crc</state>
+                                <state>$PROJ_DIR$\BSW\Dcm</state>
+                                <state>$PROJ_DIR$\BSW\Dem</state>
+                                <state>$PROJ_DIR$\BSW\Det</state>
+                                <state>$PROJ_DIR$\BSW\Ea</state>
+                                <state>$PROJ_DIR$\BSW\EcuM</state>
+                                <state>$PROJ_DIR$\BSW\Eep_30_XXi2c01</state>
+                                <state>$PROJ_DIR$\BSW\IoHwAb</state>
+                                <state>$PROJ_DIR$\BSW\Mcal_S32k</state>
+                                <state>$PROJ_DIR$\BSW\MemIf</state>
+                                <state>$PROJ_DIR$\BSW\Nm</state>
+                                <state>$PROJ_DIR$\BSW\NmOsek</state>
+                                <state>$PROJ_DIR$\BSW\NvM</state>
+                                <state>$PROJ_DIR$\BSW\Os</state>
+                                <state>$PROJ_DIR$\BSW\PduR</state>
+                                <state>$PROJ_DIR$\BSW\RamTst</state>
+                                <state>$PROJ_DIR$\BSW\vDem42</state>
+                                <state>$PROJ_DIR$\BSW\VStdLib</state>
+                                <state>$PROJ_DIR$\BSW\WdgIf</state>
+                                <state>$PROJ_DIR$\BSW\WdgM</state>
+                                <state>$PROJ_DIR$\MCAL\Adc_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Pwm_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Mcl_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Base_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Dio_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Fls_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Icu_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Mcu_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Ocu_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Port_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Spi_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\MCAL\Wdg_TS_T40D2M10I1R0\include</state>
+                                <state>$PROJ_DIR$\Appl\GenData</state>
+                                <state>$PROJ_DIR$\Appl\GenData\include</state>
+                                <state>$PROJ_DIR$\Appl\GenData\Components</state>
+                                <state>$PROJ_DIR$\Appl\Include</state>
+                                <state>$PROJ_DIR$\Appl\shared\zBrs_AsrEmbeddedRunTimeSystemCfg5</state>
+                                <state>$PROJ_DIR$\Appl\shared\zBrs_ArmCommon</state>
+                                <state>$PROJ_DIR$\Appl\shared\zBrs_S32Arm</state>
+                                <state>$PROJ_DIR$\Device</state>
+                                <state>$PROJ_DIR$\MCAL\Dio_TS_T40D2M10I1R0\include</state>
+                            </option>
+                            <option>
+                                <name>CCStdIncCheck</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCCodeSection</name>
+                                <state>.text</state>
+                            </option>
+                            <option>
+                                <name>IProcessorMode2</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCOptLevel</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCOptStrategy</name>
+                                <version>0</version>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCOptLevelSlave</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CompilerMisraRules98</name>
+                                <version>0</version>
+                                <state>1000111110110101101110011100111111101110011011000101110111101101100111111111111100110011111001110111001111111111111111111111111</state>
+                            </option>
+                            <option>
+                                <name>CompilerMisraRules04</name>
+                                <version>0</version>
+                                <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+                            </option>
+                            <option>
+                                <name>CCPosIndRopi</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCPosIndRwpi</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCPosIndNoDynInit</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccLang</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccCDialect</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IccAllowVLA</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccStaticDestr</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IccCppInlineSemantics</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccCmsis</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>IccFloatSemantics</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCOptimizationNoSizeConstraints</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCNoLiteralPool</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCOptStrategySlave</name>
+                                <version>0</version>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCEncSource</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCEncOutput</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>CCEncOutputBom</name>
+                                <state>1</state>
+                            </option>
+                            <option>
+                                <name>CCEncInput</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccExceptions2</name>
+                                <state>0</state>
+                            </option>
+                            <option>
+                                <name>IccRTTI2</name>
+                                <state>0</state>
+                            </option>
+                        </data>
+                    </settings>
+                </configuration>
             </group>
             <file>
                 <name>$PROJ_DIR$\Appl\GenData\BswM_Lcfg.c</name>
@@ -2427,12 +2745,6 @@
         <group>
             <name>Source</name>
             <file>
-                <name>$PROJ_DIR$\Appl\GenData\src\Adc_Cfg.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\Appl\GenData\src\Adc_PBcfg.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\Appl\Source\BswM_Callout_Stubs.c</name>
             </file>
             <file>
@@ -2452,9 +2764,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\Appl\Source\OsAppTask.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\Appl\GenData\src\Pwm_PBcfg.c</name>
             </file>
             <configuration>
                 <name>Debug</name>
@@ -3237,9 +3546,36 @@
             </file>
         </group>
         <group>
+            <name>GPT</name>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt_Ftm.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt_Ipw.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt_LPit.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt_Lptmr.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Gpt_TS_T40D2M10I1R0\src\Gpt_SRtc.c</name>
+            </file>
+        </group>
+        <group>
             <name>MCL</name>
             <file>
                 <name>$PROJ_DIR$\MCAL\Mcl_TS_T40D2M10I1R0\src\Ftm_Common.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Mcl_TS_T40D2M10I1R0\src\LPit_Common.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\MCAL\Mcl_TS_T40D2M10I1R0\src\Lptmr_Common.c</name>
             </file>
         </group>
         <group>

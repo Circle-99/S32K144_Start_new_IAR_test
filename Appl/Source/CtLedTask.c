@@ -132,6 +132,8 @@ FUNC(void, CtLedTask_CODE) CtLedTask_InitRunnable(void) /* PRQA S 0850 */ /* MD_
     Adc_EnableGroupNotification(0);
     //使用中断触发ADC要在初始化runnable添加上述代码
 
+    Gpt_EnableNotification(0);//原型在Gpt.c中
+    Gpt_StartTimer(0, 240000);//10ms定时器启动
 Rte_Call_UR_CN_CAN00_06ecbb07_RequestComMode(COMM_FULL_COMMUNICATION);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -165,8 +167,8 @@ FUNC(void, CtLedTask_CODE) LedRunnable(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
  * Symbol: LedRunnable
  *********************************************************************************************************************/
 
-static unsigned char  LedState=0;
-static int  LedCnt=0;
+// static unsigned char  LedState=0;
+// static int  LedCnt=0;
 static unsigned char RearLeftWindowPosition = 0;
 static unsigned char RearRightWindowPosition = 0;
 static unsigned char RearLeftWindow = 255;
@@ -176,13 +178,13 @@ static unsigned char ComSendCnt = 0;
 static Pwm_OutputStateType PwmState;
 
 
-LedCnt++;
+// LedCnt++;
 
-LedState ^= 0x01;
+// LedState ^= 0x01;
 
 
 
-Dio_WriteChannel(112,LedState);//LED falshing
+// Dio_WriteChannel(112,LedState);//LED falshing
 
 RearRightWindow = Dio_ReadChannel(DioConf_DioChannel_DioChannel_PTC12);//read key state
 if(RearRightWindow == 1)
@@ -221,12 +223,13 @@ Com_SendSignal(ComConf_ComSignal_RearRight_Window, &RearRightWindow);//规范写
 // Com_SendSignal(ComConf_ComGroupSignal_myComGroupSignal01, (&RearRightWindow));
 // Com_SendSignalGroup(ComConf_ComSignalGroup_MySignalGroup); 
 
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 }
 
-static unsigned char Cbkcnt = 0;
+static uint16 Cbkcnt = 0;
 //if receive signal，enter this function
 FUNC(void, COM_APPL_CODE) ComCbkRx_RearLeftWindowPosition(void)
 {
@@ -250,6 +253,20 @@ void ADC_Group0Notification(void)
     Com_SendSignal(ComConf_ComSignal_sig_LampCnt_omsg_MyECU_Lamp_oCAN00_f37e68ea_Tx, &Adc_Data);
 }
 
+
+void GPT_10ms(void)
+{  
+    static unsigned char  LedState=0;
+    static int  LedCnt=0;
+    Cbkcnt++;//10ms记一次数
+    if (Cbkcnt>=100)//1s闪一次
+    {
+        LedCnt++;
+        LedState ^= 0x01;//异或，两数相同为0，不同为1
+        Dio_WriteChannel(112,LedState);//LED falshing
+        Cbkcnt = 0;
+    }
+}
 
 
 #define CtLedTask_STOP_SEC_CODE

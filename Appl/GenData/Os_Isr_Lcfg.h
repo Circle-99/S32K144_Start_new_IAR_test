@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-11-29 22:43:28
+ *   Generation Time: 2025-11-30 23:51:55
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -87,6 +87,9 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_0_MB16To31;
 
 /*! ISR configuration data: CounterIsr_SystemTimer */
 extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer;
+
+/*! ISR configuration data: GptIsr_LpitChannel0 */
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GptIsr_LpitChannel0;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-11-30 11:48:42
+ *   Generation Time: 2025-11-30 23:51:54
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -85,6 +85,7 @@
 #include "Spi.h" 
 #include "Adc.h" 
 #include "Pwm.h" 
+#include "Gpt.h" 
 
 
 /**********************************************************************************************************************
@@ -280,6 +281,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
   Spi_Init( NULL_PTR );
   Adc_Init( NULL_PTR );
   Pwm_Init( NULL_PTR );
+  Gpt_Init( NULL_PTR );
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitOne>                  DO NOT CHANGE THIS COMMENT!
