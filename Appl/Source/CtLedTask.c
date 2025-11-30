@@ -52,6 +52,7 @@
 #include "Dio.h"
 #include "Com_Cfg.h"
 #include "Appl_Cbk.h"
+#include "Pwm.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
@@ -172,6 +173,8 @@ static unsigned char RearLeftWindow = 255;
 static unsigned char RearRightWindow = 99;
 static unsigned char ComSendCnt = 0;
 
+static Pwm_OutputStateType PwmState;
+
 
 LedCnt++;
 
@@ -209,6 +212,9 @@ else
 
 Adc_StartGroupConversion(0);//此处填入groupid
 
+Pwm_SetDutyCycle(0, 16384);//50%占空比
+PwmState = Pwm_GetOutputState(0);
+
 Com_SendSignal(ComConf_ComSignal_RearRight_Window, &RearRightWindow);//规范写法第二个传参不加括号
 
 // Com_SendSignal(ComConf_ComGroupSignal_ComGroupSignal, (&RearLeftWindow));
@@ -238,7 +244,8 @@ void ADC_Group0Notification(void)
     static uint16 retvalue = 0;
     
     retvalue = Adc_ReadGroup(0, &Adc_Data);//一个groupid，另一个是buffer的指针
-    Adc_Data = Adc_Data / 20; 
+    Adc_Data = Adc_Data / 20;
+
 
     Com_SendSignal(ComConf_ComSignal_sig_LampCnt_omsg_MyECU_Lamp_oCAN00_f37e68ea_Tx, &Adc_Data);
 }

@@ -914,6 +914,26 @@
             "Source",
             "..",
             "../Components",
+            "../Components/Pwm"
+         ],
+         "SourceFile" : "Source/Pwm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "D:/AUTOSAR_TOOLs/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Pwm"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Pwm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "D:/AUTOSAR_TOOLs/AUTOSAR_TOOLs/S32K144_SIP/MICROSAR/CBD1800257_D01_S32K1xx/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
             "../Components/Spi"
          ],
          "SourceFile" : "Source/Spi.c"

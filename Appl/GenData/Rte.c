@@ -56,6 +56,7 @@
 #include "SchM_Mcu.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Pwm.h"
 #include "SchM_Spi.h"
 
 #include "Rte_Hook.h"
